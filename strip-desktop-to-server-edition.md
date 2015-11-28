@@ -14,8 +14,8 @@ apt-get update
 ## Change grub to text mode
 
 ```
-sed -i 's/^GRUB_TIMEOUT=./GRUB_TIMEOUT=0/' /etc/default/grub
-sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=./GRUB_CMDLINE_LINUX_DEFAULT="text"/' /etc/default/grub
+sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub
+sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="text"/' /etc/default/grub
 sed -i 's/^#GRUB_TERMINAL/GRUB_TERMINAL/' /etc/default/grub
 update-grub2
 ```
