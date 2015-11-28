@@ -18,8 +18,9 @@ update-grub2
 
 ## Remove desktop packages
 apt-get -y install tasksel
+tasksel install xubuntu-desktop
 tasksel remove ubuntu-desktop
-aptitude -y purge '~c'
+#aptitude -y purge '~c'
 
 
 ## Set up networking - and modify as required if using static IP addresses
@@ -32,10 +33,6 @@ aptitude -y purge '~c'
 
 ## Set up remote access
 apt-get -y install ssh openssh-server
-
-
-## Install xubuntu
-apt-get -y install xubuntu-desktop
 
 
 ## Install server packages
