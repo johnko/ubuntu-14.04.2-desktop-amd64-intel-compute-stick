@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case $1 in
+	update)
+		CMD="apt-get update" ;;
+	install)
+		CMD="apt-get install" ;;
+	search)
+		CMD="apt-cache search" ;;
+	info)
+		CMD="dpkg --get-selections" ;;
+	*)
+		exit 1 ;;
+esac
+
+shift
+echo $CMD $*
+$CMD $*
+
