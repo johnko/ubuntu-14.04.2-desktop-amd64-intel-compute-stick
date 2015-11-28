@@ -5,6 +5,8 @@ case $1 in
 		CMD="apt-get update" ;;
 	install)
 		CMD="apt-get install" ;;
+	remove)
+		CMD="apt-get purge" ;;
 	search)
 		CMD="apt-cache search" ;;
 	info)
