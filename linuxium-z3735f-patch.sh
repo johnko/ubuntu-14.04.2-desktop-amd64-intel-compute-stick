@@ -14,17 +14,25 @@ if ( ! ping -q -w 1 -c 1 "${DEFAULT_GATEWAY}" > /dev/null 2>&1 ); then
 fi
 
 cat <<+ > /etc/apt/sources.list
-deb http://archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
-deb-src http://archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse
 
-deb http://archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
-deb-src http://archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-updates main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-updates main restricted universe multiverse
 
-deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse
-deb-src http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse
 
-deb http://archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
-deb-src http://archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse
 
 deb http://extras.ubuntu.com/ubuntu trusty main
 deb-src http://extras.ubuntu.com/ubuntu trusty main
