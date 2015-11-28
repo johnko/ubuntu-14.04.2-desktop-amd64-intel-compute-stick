@@ -3,6 +3,8 @@
 case $1 in
 	update)
 		CMD="apt-get update" ;;
+	upgrade)
+		CMD="apt-get upgrade" ;;
 	install)
 		CMD="apt-get install" ;;
 	remove)
