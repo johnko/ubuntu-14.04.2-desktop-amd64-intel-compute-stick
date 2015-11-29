@@ -13,22 +13,6 @@ if ( ! ping -q -w 1 -c 1 "${DEFAULT_GATEWAY}" > /dev/null 2>&1 ); then
 	exit
 fi
 
-cat <<+ > /etc/apt/sources.list
-deb http://us.archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
-deb-src http://us.archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
-
-deb http://us.archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
-deb-src http://us.archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
-
-deb http://us.archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse
-deb-src http://us.archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse
-
-deb http://us.archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
-deb-src http://us.archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
-
-deb http://extras.ubuntu.com/ubuntu trusty main
-deb-src http://extras.ubuntu.com/ubuntu trusty main
-+
 apt-get update
 apt-get -y install dkms
 cat <<+ > /etc/apt/sources.list.d/chestersmill.list

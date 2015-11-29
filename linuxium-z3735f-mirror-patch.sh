@@ -23,8 +23,12 @@ deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-updates main restricted u
 deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse
 deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse
 
-deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse
-deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu trusty-security main restricted
+deb-src http://security.ubuntu.com/ubuntu trusty-security main restricted
+deb http://security.ubuntu.com/ubuntu trusty-security universe
+deb-src http://security.ubuntu.com/ubuntu trusty-security universe
+deb http://security.ubuntu.com/ubuntu trusty-security multiverse
+deb-src http://security.ubuntu.com/ubuntu trusty-security multiverse
 
 deb http://extras.ubuntu.com/ubuntu trusty main
 deb-src http://extras.ubuntu.com/ubuntu trusty main
@@ -39,3 +43,4 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F9FDA6BED73CDC22
 apt-get update
 apt-get -y install chestersmill-settings
 echo "$0: Now 'reboot' device."
+
