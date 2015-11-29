@@ -9,40 +9,14 @@ fi
 apt-get update
 
 
-## Change grub to text mode
-sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub
-sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="text"/' /etc/default/grub
-sed -i 's/^#GRUB_TERMINAL/GRUB_TERMINAL/' /etc/default/grub
-update-grub2
-
-
 ## Remove desktop packages
 apt-get -y install tasksel
 tasksel install xubuntu-desktop
-apt-get -y purge compiz
+
+
+## Remove compiz
+#apt-get -y purge compiz
 #aptitude -y purge '~c'
-
-
-## Set up networking - and modify as required if using static IP addresses
-#cat <<EOF >> /etc/network/interfaces
-#auto eth0
-#iface eth0 inet dhcp
-#EOF
-#ifup eth0
-
-
-## Set up remote access
-apt-get -y install ssh openssh-server
-
-
-## Install server packages
-#tasksel install server
-
-
-## Perform updates
-apt-get update
-#apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 16126D3A3E5C1192
-#apt-get update
 
 
 # Reboot to finish
