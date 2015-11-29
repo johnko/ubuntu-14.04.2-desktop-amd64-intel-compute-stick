@@ -16,6 +16,9 @@ apt-get -y install xubuntu-desktop
 ## Remove compiz
 apt-get -y remove compiz indicator-datetime
 apt-get -y autoremove
+
+
+## Don't purge because it causes issues
 #aptitude -y purge '~c'
 
 
