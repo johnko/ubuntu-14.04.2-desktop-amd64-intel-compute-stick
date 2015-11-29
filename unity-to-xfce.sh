@@ -19,7 +19,7 @@ update-grub2
 ## Remove desktop packages
 apt-get -y install tasksel
 tasksel install xubuntu-desktop
-tasksel remove ubuntu-desktop
+apt-get -y purge compiz
 #aptitude -y purge '~c'
 
 
@@ -36,7 +36,7 @@ apt-get -y install ssh openssh-server
 
 
 ## Install server packages
-tasksel install server
+#tasksel install server
 
 
 ## Perform updates
