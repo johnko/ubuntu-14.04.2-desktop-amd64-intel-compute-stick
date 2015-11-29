@@ -7,7 +7,7 @@ fi
 sudo -E apt-get update
 sudo -E apt-get -y install linux-generic-lts-utopic
 sudo -E apt-get -y install git tmux ssh openssh-server
-sudo -E apt-get -y install gnome-weather
+sudo -E apt-get -y install chromium-browser
 
 #xubuntu-desktop
 
