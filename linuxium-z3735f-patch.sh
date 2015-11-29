@@ -22,4 +22,11 @@ deb-src http://oem.archive.canonical.com/updates/ trusty-chestersmill public
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F9FDA6BED73CDC22
 apt-get update
 apt-get -y install chestersmill-settings
+
+
+# remove bluetooth but keep wifi
+apt-get -y install oem-audio-i915-baytrail-dkms rtl8723bs-dkms
+apt-get -y remove rtl8723bs-bluetooth-dkms rtl8723bs-bluetooth-misc
+
 echo "$0: Now 'reboot' device."
+
