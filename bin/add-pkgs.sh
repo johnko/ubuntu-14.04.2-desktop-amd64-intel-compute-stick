@@ -5,7 +5,7 @@ if [ -e ./pkg ]; then
 fi
 
 sudo -E apt-get update
-#sudo -E apt-get install linux-generic-lts-utopic
-sudo -E apt-get install git tmux tasksel openssh-client
+sudo -E apt-get -y install linux-generic-lts-utopic
+sudo -E apt-get -y install git tmux ssh openssh-server
 #xubuntu-desktop
 

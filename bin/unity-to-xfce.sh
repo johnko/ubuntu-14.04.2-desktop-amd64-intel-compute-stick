@@ -10,12 +10,12 @@ apt-get update
 
 
 ## Remove desktop packages
-apt-get -y install tasksel
-tasksel install xubuntu-desktop
+apt-get -y install xubuntu-desktop
 
 
 ## Remove compiz
-#apt-get -y purge compiz
+apt-get -y remove compiz
+apt-get -y autoremove
 #aptitude -y purge '~c'
 
 
